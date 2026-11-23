@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -6,7 +6,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CODECFORTR = UTF-8
 CODECFORSRC = UTF-8
 
-CONFIG += c++17
+CONFIG += c++17 lrelease embed_translations
+TRANSLATIONS += translations/KeyPresserHardware_en.ts
+msvc:QMAKE_CXXFLAGS += /utf-8
 QMAKE_PROJECT_DEPTH = 0
 #win32:CONFIG(release, debug|release) {
 #    QMAKE_LFLAGS += /MANIFESTUAC:\"level=\'requireAdministrator\' uiAccess=\'false\'\"
@@ -17,12 +19,14 @@ QMAKE_PROJECT_DEPTH = 0
 win32:LIBS += -lgdi32
 
 SOURCES += \
+    AppLanguage.cpp \
     aboutmedlg.cpp \
     keypresserHardware.cpp \
     main.cpp
 
 
 HEADERS += \
+    AppLanguage.h \
     ArduinoController.hpp \
     aboutmedlg.h \
     keypresserHardware.h

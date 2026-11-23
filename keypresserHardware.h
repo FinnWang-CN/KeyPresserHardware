@@ -36,7 +36,7 @@ public:
     QLabel *arduinoLabel;
     //Dm::Idmsoft* _dm = nullptr;
     ArduinoController _controller;
-    bool checkArduino();
+    void checkArduino(bool prompt = false);
 public slots:
     void selectWindow();
     void togglePressing();
@@ -63,6 +63,7 @@ private:
     bool bIsRuning = false;
     bool bTimerTaskEnabled = false;
     QPushButton *toggleButton;
+    HWINEVENTHOOK selectionHook = nullptr;
     QTimer *sequenceTimer = nullptr;
     QTimer *timerTaskChecker = nullptr;
     QDateTimeEdit *startTimeEdit = nullptr;
@@ -96,6 +97,8 @@ private:
     void populateShortcutCombos(QComboBox *comboBox);
     void populateKeyCombos(QComboBox *comboBox);
     void stopAllTimers();
+    bool canSendToTarget();
+    void handleArduinoWriteFailure();
     void loadSettings();
     void saveSettings();
     void attachToTargetWindow();
