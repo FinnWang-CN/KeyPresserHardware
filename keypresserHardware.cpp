@@ -19,6 +19,8 @@
 #include <QDebug>
 #include <limits>
 #include <QInputDialog>
+#include <QDialog>
+#include <QPixmap>
 
 
 KeyPresserHardware *KeyPresserHardware::instance = nullptr;
@@ -148,9 +150,29 @@ KeyPresserHardware::KeyPresserHardware(QWidget *parent) : QWidget(parent)
     arduinoLabel->setStyleSheet("color: red;");
     auto *connectButton = new QPushButton(tr("连接 Arduino"), this);
     connect(connectButton, &QPushButton::clicked, this, [this]() { checkArduino(true); });
+    auto *supportButton = new QToolButton(this);
+    supportButton->setIcon(QIcon(QStringLiteral(":/png/support-heart.png")));
+    supportButton->setText(tr("赞赏作者"));
+    supportButton->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    connect(supportButton, &QToolButton::clicked, this, [this]() {
+        QDialog dialog(this);
+        dialog.setWindowTitle(tr("赞赏作者"));
+        auto *layout = new QVBoxLayout(&dialog);
+        auto *instructions = new QLabel(tr("请打开微信扫一扫。"), &dialog);
+        auto *code = new QLabel(&dialog);
+        code->setPixmap(QPixmap(QStringLiteral(":/png/wechat-support.png")));
+        auto *closeButton = new QPushButton(tr("关闭"), &dialog);
+        connect(closeButton, &QPushButton::clicked, &dialog, &QDialog::accept);
+        layout->addWidget(instructions, 0, Qt::AlignHCenter);
+        layout->addWidget(code, 0, Qt::AlignHCenter);
+        layout->addWidget(closeButton, 0, Qt::AlignRight);
+        layout->setSizeConstraint(QLayout::SetFixedSize);
+        dialog.exec();
+    });
     auto *arduinoLayout = new QHBoxLayout();
     arduinoLayout->addWidget(arduinoLabel, 1);
     arduinoLayout->addWidget(connectButton);
+    arduinoLayout->addWidget(supportButton);
     layout->addLayout(arduinoLayout);
     QLabel *label = new QLabel(tr("选择窗口:"), this);
     layout->addWidget(label);

@@ -254,6 +254,18 @@ Use F1–F12 with care.</translation>
         <source>运行中</source>
         <translation>Running</translation>
     </message>
+    <message>
+        <source>赞赏作者</source>
+        <translation>Support the author</translation>
+    </message>
+    <message>
+        <source>请打开微信扫一扫。</source>
+        <translation>Scan this code in WeChat.</translation>
+    </message>
+    <message>
+        <source>关闭</source>
+        <translation>Close</translation>
+    </message>
 </context>
 <context>
     <name>StartupPromotion</name>

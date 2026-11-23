@@ -3,7 +3,7 @@
   #error "Pass /DAppStageDir=<absolute path to the staged Windows application>."
 #endif
 
-#define MyAppVersion "1.1.0"
+#define MyAppVersion "1.1.1"
 #define MyAppName "KeyPresser Hardware"
 #define LegacyAppName "KeyPresser硬件版"
 #define MyAppPublisher "Finn Wang"
