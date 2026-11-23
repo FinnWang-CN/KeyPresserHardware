@@ -92,7 +92,6 @@ KeyPresserHardware::KeyPresserHardware(QWidget *parent) : QWidget(parent)
     });
 
     QFrame *toolButtonFrame = new QFrame();
-    toolButtonFrame->setFixedHeight(30);
     toolButtonFrame->setStyleSheet("QFrame { border-bottom: 1px solid #cccccc; border-radius: 0px; padding-bottom: 0px; background-color: #dadcde; }");
     QHBoxLayout *toolButtonLayout = new QHBoxLayout(toolButtonFrame);
     toolButtonLayout->setSpacing(0);
@@ -962,10 +961,10 @@ void KeyPresserHardware::saveSettingsToObject(QSettings &settings) {
 
 void KeyPresserHardware::clearSettings() {
     QSettings settings("FinnSoft", "KeyPresserHardware");
-    const QVariant language = settings.value(QStringLiteral("uiLanguage"));
-    settings.clear();
-    if (language.isValid())
-        settings.setValue(QStringLiteral("uiLanguage"), language);
+    for (const QString &key : settings.childKeys()) {
+        if (key != QStringLiteral("uiLanguage"))
+            settings.remove(key);
+    }
 
     // 重置界面上的控件为默认值
     spaceCheckBox->setChecked(false);

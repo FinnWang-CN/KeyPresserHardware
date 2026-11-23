@@ -7,6 +7,7 @@ CODECFORTR = UTF-8
 CODECFORSRC = UTF-8
 
 CONFIG += c++17 lrelease embed_translations
+VERSION = 1.1.0
 TRANSLATIONS += translations/KeyPresserHardware_en.ts
 msvc:QMAKE_CXXFLAGS += /utf-8
 QMAKE_PROJECT_DEPTH = 0

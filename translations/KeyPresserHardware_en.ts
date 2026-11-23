@@ -9,7 +9,7 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;基于Arduino Leonardo的按键模拟工具，实现真实的按键输入！&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Arduino &lt;/span&gt;Leonardo开发板购买链接：&lt;a href=&quot;https://e.tb.cn/h.72kLyFd6p2Ci12Y?tk=9UMIfuG2wjP&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#1f9b5d;&quot;&gt;点击购买&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body&gt;&lt;p align="center"&gt;Keyboard automation with Arduino Leonardo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Keyboard automation with Arduino Leonardo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -253,6 +253,29 @@ Use F1–F12 with care.</translation>
     <message>
         <source>运行中</source>
         <translation>Running</translation>
+    </message>
+</context>
+<context>
+    <name>StartupPromotion</name>
+    <message>
+        <source>试试 KeyPresser 专业版</source>
+        <translation>Try KeyPresser Professional</translation>
+    </message>
+    <message>
+        <source>KeyPresser 专业版支持窗口录制回放、图像识别、鼠标自动化和 Python 脚本。</source>
+        <translation>KeyPresser Professional adds window recording and playback, image recognition, mouse automation, and Python scripting.</translation>
+    </message>
+    <message>
+        <source>了解专业版</source>
+        <translation>Explore Professional</translation>
+    </message>
+    <message>
+        <source>稍后再说</source>
+        <translation>Later</translation>
+    </message>
+    <message>
+        <source>不再显示</source>
+        <translation>Do not show again</translation>
     </message>
 </context>
 </TS>

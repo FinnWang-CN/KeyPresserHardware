@@ -21,7 +21,6 @@ QPushButton {
 /* 工具按钮样式 */
 QToolButton {
     height: 24px;
-    max-width: 47px;
     padding: 2px 2px;
     spacing: 2px;
     background-color: transparent;

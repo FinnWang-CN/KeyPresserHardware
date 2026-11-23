@@ -4,6 +4,12 @@ English | [简体中文](README.zh-CN.md)
 
 KeyPresser Hardware is a Windows desktop app that uses an Arduino Leonardo as a USB keyboard. Configure keys, shortcuts and timing in the app. The Arduino sketch receives commands over USB serial and generates the keyboard input.
 
+![KeyPresser Hardware running in English on Windows](png/keypresser-hardware-en.png)
+
+## Download for Windows
+
+Get the x64 installer from [GitHub Releases](https://github.com/FinnWang-CN/KeyPresserHardware/releases/latest). The installer includes the Arduino sketch, also available in this repository.
+
 ## Build and set up
 
 1. Install the **Qt 5.15.2 MSVC 64-bit** kit, including Qt Serial Port and the Qt Linguist tools, and install the MSVC C++ build tools.
@@ -14,6 +20,7 @@ KeyPresser Hardware is a Windows desktop app that uses an Arduino Leonardo as a 
 
 ## Use the app
 
+- The startup tip for KeyPresser Professional shows at most once every seven days. Select **Do not show again** to turn it off.
 - Click **中文 / English** in the toolbar to change the interface language. The app restarts and remembers the choice. On first launch it uses Simplified Chinese on Chinese Windows systems and English on other systems.
 - Click **Select window**, then bring the target window to the foreground. Enable the keys you want, choose any modifiers, and set the interval in milliseconds. Use equal values for a fixed interval or different values for a random interval.
 - Choose **Independent** to run each enabled key on its own timer, or **Sequential** to cycle through enabled key rows in order.

@@ -37,6 +37,10 @@ Arduino 固件需要烧录到 Arduino Leonardo 开发板中，负责接收来自
   - Qt 5.15.2 64 位 MSVC 套件，包含 Qt Serial Port 和 Qt Linguist 工具
   - Visual Studio 2019 或更高版本（用于编译）
 
+## 下载 Windows 安装包
+
+从 [GitHub Releases](https://github.com/FinnWang-CN/KeyPresserHardware/releases/latest) 下载 x64 安装包。安装目录下的 `Arduino\keypresser` 包含开发板固件源码。
+
 ## 安装方法
 
 ### 1. 编译项目
@@ -191,4 +195,4 @@ A: 请检查：
 
 ## 赞赏作者
 
-![zansan](https://s2.loli.net/2026/01/20/KvmtgkYZwREA4MD.png)
+![微信赞赏码](png/wechat-support.png)
