@@ -152,8 +152,9 @@ KeyPresserHardware::KeyPresserHardware(QWidget *parent) : QWidget(parent)
     connect(connectButton, &QPushButton::clicked, this, [this]() { checkArduino(true); });
     auto *supportButton = new QToolButton(this);
     supportButton->setIcon(QIcon(QStringLiteral(":/png/support-heart.png")));
-    supportButton->setText(tr("赞赏作者"));
-    supportButton->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    supportButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    supportButton->setToolTip(tr("赞赏作者"));
+    supportButton->setAccessibleName(supportButton->toolTip());
     connect(supportButton, &QToolButton::clicked, this, [this]() {
         QDialog dialog(this);
         dialog.setWindowTitle(tr("赞赏作者"));

@@ -20,7 +20,7 @@ Get the x64 installer from [GitHub Releases](https://github.com/FinnWang-CN/KeyP
 
 ## Use the app
 
-- Click **Support the author** beside **Connect Arduino** to open the WeChat support code.
+- Click the blue heart beside **Connect Arduino** to open the WeChat support code.
 - The startup tip for KeyPresser Professional shows at most once every seven days. Select **Do not show again** to turn it off.
 - Click **中文 / English** in the toolbar to change the interface language. The app restarts and remembers the choice. On first launch it uses Simplified Chinese on Chinese Windows systems and English on other systems.
 - Click **Select window**, then bring the target window to the foreground. Enable the keys you want, choose any modifiers, and set the interval in milliseconds. Use equal values for a fixed interval or different values for a random interval.
